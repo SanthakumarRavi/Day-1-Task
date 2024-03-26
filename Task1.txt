@@ -1,0 +1,29 @@
+Difference between HTTP1.1 vs HTTP2
+
+HTTP1.1
+
+1. It was developed in the year 1997
+2. It compresses data by itself.
+3. A text-based protocol uses plain text to encode and transmit data.
+4. The client sends a request to a server, and the server sends a response back to the client.
+5. A separate connection is established for each request and response, which can add overhead and latency to the communication process.
+6. HTTP 1.1 cannot handle buffer overflow vulnerabilities due to the lack of sufficient measures.
+7. HTTP 1.1 does not include any in-built features, so the performance it delivers is less efficient.
+8. One of the most significant benefits of HTTP 1.1 is the support for persistent connections, allowing multiple requests to be sent over the same connection. This reduces the overhead of establishing new connections for each request and results in improved performance.
+9. It was no longer required for each connection to be terminated immediately after every request was served with a response; instead, with the keep-alive header, it was possible to have persistent connections. It allowed multiple requests/responses per TCP connection.
+10. Much faster and more efficient and Developers have hands-on, detailed control over prioritization
+
+
+HTTP2
+
+1. It was developed in the year 2015.
+2. It uses HPACK for data compression.
+Slower and less efficient and Developers have less control over prioritization
+3. It works on the binary protocol as a series of binary codes encode and transmit data rather than plain text.
+4. A different underlying protocol called Secure Remote Protocol 2 (SRP2) establishes a secure connection between a client and a server.
+5. It allows multiplexing so multiple requests and responses can be sent over a single connection.
+6. HTTP 2 includes measures to prevent buffer overflow vulnerabilities.
+7. HTTP 2 is designed to be more efficient and performant than HTTP 1.1. This is because HTTP 2 includes several features like multiplexing, binary protocol and header compression.
+8. It introduces the concept of a server push where the server anticipates the resources that will be required by the client and pushes them prior to the client making requests. The client retains the authority to deny the server push; however, in most cases, this feature adds a lot of efficiency to the process.
+9. Slower and less efficient and Developers have less control over prioritization
+10. HTTP/2 uses HPACK header compression algorithm that is resilient to attacks like CRIME and utilizes static Huffman encoding.
